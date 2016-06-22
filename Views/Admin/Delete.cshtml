@@ -1,0 +1,50 @@
+﻿@model accessoriesShop.Models.Product
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Delete</h2>
+<p/>
+@using (Html.BeginForm("Delete", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{   
+        <div >
+            <label >Id</label>
+        </div>
+        <div >
+            <input  id="Id" name="Id" type="text" value="@Model.Id" readOnly="true"/>
+            
+        </div>
+        <div >
+            <label >ProductType</label>
+        </div>
+        <div >
+            <input  id="ProductType" name="ProductType" type="text" value="@Model.ProductType"  readOnly="true"/>
+            
+        </div>
+        
+        <div hidden>
+            <label >Path</label>
+        </div>
+        <div class="editor-field" hidden>
+             <span>
+                 <input type="file" name="path" value="@Model.Path" />
+                  @Html.ValidationMessageFor(model => model.Path)           
+             </span>
+         </div>
+        <div >
+            <label >Price</label>
+        </div>
+        
+        <div >
+            <input  id="Price" name="Price" type="text" value="@Model.Price"  readOnly="true"/>
+            
+        </div>
+
+              <p>Are you sure you wan to delete?</p>
+              <a href="~/Admin/Delete/@Model.Id"/><input type="submit" value="Delete" />
+        <!--<p>
+            <input type="submit" value="Delete" />
+        </p>-->
+}
+

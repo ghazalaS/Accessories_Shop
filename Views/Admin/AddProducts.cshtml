@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Products";
+}
+@model List<accessoriesShop.Models.Product>
+
+<!DOCTYPE html>
+<html>
+    
+<head>
+<title>Accessories Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Products :: w3layouts</title>
+</head>
+
+	
+<body >
+<!-- header -->
+	
+<!-- //header -->
+<!-- breadcrumbs -->
+        
+    <p style="margin-left:325px; color: red;"/><input  type="button" onclick="@("location.href='"+Url.Action("Create","Admin")+"'")" value="AddNewProducts"/>
+    <p />
+    <p/>
+<table  border=1 style="width: 700px; margin:auto;">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>ProductType</th>
+                <th>Path</th>
+                <th>Price</th>
+                <th colspan=2>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+             @{
+        foreach (var user in Model)
+        {
+            <tr>      
+            <td>@user.Id</td>
+            <td>@user.ProductType</td>     
+            <td>@user.Path</td>
+            <td>@user.Price</td> 
+            
+                <td><a href="~/Admin/Edit/@user.Id">Edit</a></td>
+                <td><a href="~/Admin/Delete/@user.Id">Delete</a></td>
+        </tr>
+             }
+             }
+        </tbody>
+    </table>
+
+
+<!-- //breadcrumbs -->
+<!-- footer -->
+	
+<!-- //footer -->
+</body>
+</html>

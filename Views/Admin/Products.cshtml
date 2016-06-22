@@ -1,0 +1,380 @@
+﻿@{
+    ViewBag.Title = "Glasses";
+}
+
+<h2>Glasses</h2>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Accessories Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Products :: w3layouts</title>
+
+
+
+</head>
+	
+<body>
+<!-- header -->
+	
+<!-- //header -->
+<!-- breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+				<li><a href="~/Home/index"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li class="active">Products</li>
+			</ol>
+		</div>
+	</div>
+	<div class="products">
+		<div class="container">
+			<div class="col-md-4 products-left">
+				<div class="filter-price animated wow slideInUp" data-wow-delay=".5s">
+					<ul class="dropdown-menu1">
+							<li>							               
+							<div id="slider-range"></div>							
+							<input type="text" id="amount" style="border: 0" />
+							</li>	
+					</ul>
+						<script type='text/javascript'>//<![CDATA[ 
+						    $(window).load(function () {
+						        $("#slider-range").slider({
+						            range: true,
+						            min: 0,
+						            max: 100000,
+						            values: [20000, 80000],
+						            slide: function (event, ui) {
+						                $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+						            }
+						        });
+						        $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+
+						    });//]]>
+						</script>
+						<script type="text/javascript" src="~/Content/js/jquery-ui.min.js"></script>
+					 <!---->
+				</div>
+				<div class="categories animated wow slideInUp" data-wow-delay=".5s">
+					<h3>Categories</h3>
+					<ul class="cate">
+						<li><span><a href="~/Home/products">Accessories</a></span></li>
+							<ul>
+								<li><a href="~/Home/jewelery">Jewelery</a> </li>
+								<li><a href="~/Home/glasses">Glasses</a> </li>
+								<li><a href="~/Home/watches">Watches</a> </li>
+								<li><a href="~/Home/covers">Mobile Cases</a> </li>
+							</ul>
+					</ul>
+				</div>
+				
+				
+			</div>
+			<div class="col-md-8 products-right">
+				
+				<div class="products-right-grids-bottom">
+					<div class="col-md-4 products-right-grids-bottom-grid">
+						<div class="new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
+							<div class="new-collections-grid1-image">
+								<a href="~/Home/single" class="product-image"><img style="height:220px;width:260px" src="~/Content/images/g1.jpg" alt=" " class="img-responsive"></a>
+								<div class="new-collections-grid1-image-pos products-right-grids-pos">
+									<a href="~/Home/single">Review</a>
+								</div>
+								<div class="new-collections-grid1-right products-right-grids-pos-right">
+									<div class="rating">
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+								</div>
+							</div>
+							<h4><a href="~/Home/single"></a></h4>
+							<div class="simpleCart_shelfItem products-right-grid1-add-cart">
+								<p><span class="item_price">$250</span><a class="item_add" href="#">add to cart </a></p>
+							</div>
+						</div>
+						<div class="new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
+							<div class="new-collections-grid1-image">
+								<a href="~/Home/single" class="product-image"><img style="height:220px;width:260px" src="~/Content/images/g2.jpg" alt=" " class="img-responsive"></a>
+								<div class="new-collections-grid1-image-pos products-right-grids-pos">
+									<a href="~/Home/single">Review</a>
+								</div>
+								<div class="new-collections-grid1-right products-right-grids-pos-right">
+									<div class="rating">
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+								</div>
+							</div>
+							<h4><a href="~/Home/single"></a></h4>
+							<div class="simpleCart_shelfItem products-right-grid1-add-cart">
+								<p><span class="item_price">$250</span><a class="item_add" href="#">add to cart </a></p>
+							</div>
+						</div>
+						<div class="new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
+							<div class="new-collections-grid1-image">
+								<a href="~/Home/single" class="product-image"><img style="height:220px;width:260px" src="~/Content/images/g3.jpg" alt=" " class="img-responsive"></a>
+								<div class="new-collections-grid1-image-pos products-right-grids-pos">
+									<a href="~/Home/single">Review</a>
+								</div>
+								<div class="new-collections-grid1-right products-right-grids-pos-right">
+									<div class="rating">
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+								</div>
+							</div>
+							<h4><a href="~/Home/single"></a></h4>
+							<div class="simpleCart_shelfItem products-right-grid1-add-cart">
+								<p><span class="item_price">$489</span><a class="item_add" href="#">add to cart </a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 products-right-grids-bottom-grid">
+						<div class="new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
+							<div class="new-collections-grid1-image">
+								<a href="~/Home/single" class="product-image"><img style="height:220px;width:260px" src="~/Content/images/g4.jpg" alt=" " class="img-responsive"></a>
+								<div class="new-collections-grid1-image-pos products-right-grids-pos">
+									<a href="~/Home/single">Review</a>
+								</div>
+								<div class="new-collections-grid1-right products-right-grids-pos-right">
+									<div class="rating">
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+								</div>
+							</div>
+							<h4><a href="~/Home/single"></a></h4>
+							<div class="simpleCart_shelfItem products-right-grid1-add-cart">
+								<p><span class="item_price">$250</span><a class="item_add" href="#">add to cart </a></p>
+							</div>
+						</div>
+						<div class="new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
+							<div class="new-collections-grid1-image">
+								<a href="~/Home/single" class="product-image"><img style="height:220px;width:260px" src="~/Content/images/g5.jpg" alt=" " class="img-responsive"></a>
+								<div class="new-collections-grid1-image-pos products-right-grids-pos">
+									<a href="~/Home/single">Review</a>
+								</div>
+								<div class="new-collections-grid1-right products-right-grids-pos-right">
+									<div class="rating">
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+								</div>
+							</div>
+							<h4><a href="~/Home/single"></a></h4>
+							<div class="simpleCart_shelfItem products-right-grid1-add-cart">
+								<p><span class="item_price">$480</span><a class="item_add" href="#">add to cart </a></p>
+							</div>
+						</div>
+						<div class="new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
+							<div class="new-collections-grid1-image">
+								<a href="~/Home/single" class="product-image"><img style="height:220px;width:260px" src="~/Content/images/g6.jpg" alt=" " class="img-responsive"></a>
+								<div class="new-collections-grid1-image-pos products-right-grids-pos">
+									<a href="~/Home/single">Review</a>
+								</div>
+								<div class="new-collections-grid1-right products-right-grids-pos-right">
+									<div class="rating">
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+								</div>
+							</div>
+							<h4><a href="~/Home/single"></a></h4>
+							<div class="simpleCart_shelfItem products-right-grid1-add-cart">
+								<p><span class="item_price">$489</span><a class="item_add" href="#">add to cart </a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 products-right-grids-bottom-grid">
+						<div class="new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
+							<div class="new-collections-grid1-image">
+								<a href="~/Home/single" class="product-image"><img style="height:220px;width:260px" src="~/Content/images/g7.jpg" alt=" " class="img-responsive"></a>
+								<div class="new-collections-grid1-image-pos products-right-grids-pos">
+									<a href="~/Home/single">Review</a>
+								</div>
+								<div class="new-collections-grid1-right products-right-grids-pos-right">
+									<div class="rating">
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+								</div>
+							</div>
+							<h4><a href="~/Home/single"></a></h4>
+							<div class="simpleCart_shelfItem products-right-grid1-add-cart">
+								<p><span class="item_price">$280</span><a class="item_add" href="#">add to cart </a></p>
+							</div>
+						</div>
+						<div class="new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
+							<div class="new-collections-grid1-image">
+								<a href="~/Home/single" class="product-image"><img style="height:220px;width:260px" src="~/Content/images/g8.jpg" alt=" " class="img-responsive"></a>
+								<div class="new-collections-grid1-image-pos products-right-grids-pos">
+								</div>
+								<div class="new-collections-grid1-right products-right-grids-pos-right">
+									<div class="rating">
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+								</div>
+							</div>
+							<h4><a href="~/Home/single"></a></h4>
+							<div class="simpleCart_shelfItem products-right-grid1-add-cart">
+								<p><span class="item_price">$299</span><a class="item_add" href="#">add to cart </a></p>
+							</div>
+						</div>
+						<div class="new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
+							<div class="new-collections-grid1-image">
+								<a href="~/Home/single" class="product-image"><img style="height:220px;width:260px" src="~/Content/images/g9.jpg" alt=" " class="img-responsive"></a>
+								<div class="new-collections-grid1-image-pos products-right-grids-pos">
+									<a href="~/Home/single">Review</a>
+								</div>
+								<div class="new-collections-grid1-right products-right-grids-pos-right">
+									<div class="rating">
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/2.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="rating-left">
+											<img src="~/Content/images/1.png" alt=" " class="img-responsive">
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+								</div>
+							</div>
+							<h4><a href="~/Home/single"></a></h4>
+							<div class="simpleCart_shelfItem products-right-grid1-add-cart">
+								<p><span class="item_price">$489</span><a class="item_add" href="#">add to cart </a></p>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!-- //breadcrumbs -->
+<!-- footer -->
+	
+<!-- //footer -->
+</body>
+</html>

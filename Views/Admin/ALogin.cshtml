@@ -1,0 +1,100 @@
+﻿s<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Accessories Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Login :: w3layouts</title>
+
+
+
+</head>
+	        @model accessoriesShop.Models.Register
+
+<body>
+<!-- header -->
+	
+<!-- //header -->
+<!-- breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+				<li><a href="~/Home/index"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li class="active">Login Page</li>
+			</ol>
+		</div>
+	</div>
+<!-- //breadcrumbs -->
+<!-- login -->
+	<div class="login">
+		<div class="container">
+			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Login Form</h3>
+			<p class="est animated wow zoomIn" data-wow-delay=".5s"></p>
+			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
+
+				@using (Html.BeginForm("ALogin", "Admin", FormMethod.Post))
+                    {                  
+                         <div>@ViewBag.wrong</div>
+                        <fieldset>
+                            <legend>Profile Information</legend>
+					<div class="editor-label">
+                        @Html.LabelFor(model => model.Email)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Email, new { required="required"})
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                    <div id="ans"></div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Password)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Password,new { required="required"})
+                        @Html.ValidationMessageFor(model => model.Password)
+                    </div>
+					<div class="forgot">
+						<a href="~/Admin/AForget_pass">Forgot Password?</a>
+					</div>
+					<input type="submit" value="Login">
+     @Scripts.Render("~/bundles/jquery")
+    <script>
+
+        $(document).ready(function () {
+
+            $('#Email').change(function () {
+                var email = $('#Email').val();
+
+                $.getJSON("/home/CheckLoginEmail?Email=" + email, function (data) {
+                    if (data == false) {
+                        // alert('trueEmail =' + email);
+                        $('#ans').html("Email address not exists.").css({ color: 'Red' });
+                    }
+                });
+
+            });
+
+        });
+    </script>
+                            <script>
+                                function preventBack() { window.history.forward(); }
+                                setTimeout("preventBack()", 0);
+                                window.onunload = function () { null };
+                        </script>
+
+                        </fieldset>
+                    }
+			</div>
+			<h4 class="animated wow slideInUp" data-wow-delay=".5s">For New People</h4>
+			<p class="animated wow slideInUp" data-wow-delay=".5s"><a href="~/Home/register">Register Here</a> (Or) go back to <a href="index.html">Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></p>
+		</div>
+	</div>
+<!-- //login -->
+<!-- footer -->
+	
+<!-- //footer -->
+</body>
+</html>

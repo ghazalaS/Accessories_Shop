@@ -1,0 +1,129 @@
+﻿<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Accessories Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Checkout :: w3layouts</title>
+
+
+
+    
+</head>
+	
+<body>
+    @model List<accessoriesShop.Models.Cart>
+
+<!-- header -->
+	
+<!-- //header -->
+<!-- breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+				<li><a href="~/Home/index"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li class="active">Checkout Page</li>
+			</ol>
+		</div>
+	</div>
+<!-- //breadcrumbs -->
+<!-- checkout -->
+	<div class="checkout">
+		<div class="container">
+            
+			                <h3 class="animated wow slideInLeft" data-wow-delay=".5s">Your shopping cart contains: <span></span></h3>
+                        
+			<div class="checkout-right animated wow slideInUp" data-wow-delay=".5s">
+				<table class="timetable_sub">
+					<thead>
+						<tr>
+							<th>Product</th>
+							<th>Quantity</th>
+							<th>Product Name</th>
+							<th>Price</th>
+							<th>Remove</th>
+						</tr>
+					</thead>
+					
+                    @{
+                        var UserName = (Session["UserName"] as accessoriesShop.Models.Register).UserName;
+
+                        if(UserName!=null){
+                        foreach (var cart in Model.Where(p => p.UserName.Equals(UserName)))
+                        {
+                        <tr class="rem1">
+						<td class="invert-image"><img height="200" width="200" src="@Url.Content(cart.Path)" alt=" " class="img-responsive" /></td>
+						<!--<td class="invert">
+							 <div class="quantity"> 
+								<div class="quantity-select">                           
+									<div class="entry value-minus">&nbsp;</div>
+									<div class="entry value"><span>1</span></div>
+									<div class="entry value-plus active">&nbsp;</div>
+								</div>
+							</div>
+						</td>-->
+						<td class="invert">@cart.ProductQuantity</td>
+						<td class="invert">@cart.ProductType</td>
+						<td class="invert">$@cart.Price</td>
+                        <td><a href="~/Home/DeleteCartProduct/@cart.ProductId">Delete</a></td>
+
+						<!--<td class="invert">
+							<div class="rem">
+								<div class="close1"> </div>
+							</div>
+							<script>$(document).ready(function (c) {
+                            $('.close1').on('click', function (c) {
+                                $('.rem1').fadeOut('slow', function (c) {
+                                    $('.rem1').remove();
+                                });
+                            });
+                        });
+						    </script>
+						</td>-->
+					</tr>
+                    }
+                    }
+                    else{
+                            
+                    }
+                    }
+					
+								<!--quantity-->
+				</table>
+			</div>
+			<div class="checkout-left">	
+				<div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
+					<h4>Continue to basket</h4>
+                    @{
+                        var UName = (Session["UserName"] as accessoriesShop.Models.Register).UserName;
+                        double total = 0;
+                        if (UName != null)
+                        {
+                            foreach (var cart in Model.Where(p => p.UserName.Equals(UName)))
+                            {
+                                
+                                total = (total + @cart.Price);
+					            <ul>
+						            <li>@cart.ProductType<i>-</i><span>$@cart.Price</span></li>
+					            </ul>
+                            }
+                        }
+                        <h2>Total:@total</h2>
+                        }
+				</div>
+				<div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
+					<a href="~/Home/Index"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //checkout -->
+<!-- footer -->
+	
+<!-- //footer -->
+</body>
+</html>
